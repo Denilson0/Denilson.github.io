@@ -1,0 +1,331 @@
+/*default*/
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-size: 100%;
+	border: none;
+	outline: none;
+}
+
+/* header */
+header.cabecalho {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 150px;
+	background-color: rgb(0, 51, 102);
+}
+header.cabecalho h1 {
+	height: 100px;
+	width: 250px;
+	text-align: center;
+	line-height: 100px;
+	font-size: 2em;
+	color: #fff;
+	text-shadow:  7px 4px 4px #000;
+}
+header.cabecalho span {color: #f5f5f5;}
+header.cabecalho h2 {
+	height: 100px;
+	width: 200px;
+	text-align: center;
+	line-height: 100px;
+	font-size: 1.2em;
+	color: #fff;
+	text-decoration: underline;
+}
+header.cabecalho div {
+	width: 200px;
+	height: 100px;
+	background-color: red;
+}
+
+/*section nav-fomr*/
+section.nav-form {
+	display: flex;
+	width: 100%;
+	position: sticky;
+	top: 0px;
+	box-shadow: 0px 5px 5px #001a33;
+}
+section.nav-form .menu-response {
+	display: none;
+	padding: 20px 30px;
+	background-color: #004d99;
+	color: #fff;
+	font-size: 2em;
+}
+/* nav menu*/
+section.nav-form nav.menu {
+	flex: 70%;
+	display: block;
+	height: 50px;
+	background-color: #004d99;
+}
+section.nav-form nav.menu a {
+	float: left;
+	padding: 0px 20px 0px 20px;
+	line-height: 50px;
+	color: #fff;
+	background-color:  #004d99;
+	text-decoration: none;
+	font-size: 1.4em;
+}
+section.nav-form nav.menu a.active {background-color: #001a33;}
+section.nav-form nav.menu a:hover:not(.active) { background-color: #3399ff;}
+/*form search*/
+section.nav-form form {
+	flex: 50%;
+	display: flex;
+	justify-content: center;
+	height: 50px;
+	background-color:  #004d99; 
+}
+section.nav-form form input {
+	width: 70%;	
+	border-radius: 4px 0px 0px 4px;
+	padding-left: 7px;
+	margin-left: 5px;
+}
+section.nav-form form button {
+	border-radius: 0px 4px 4px 0px;
+	width: 20%;
+	cursor: pointer; 
+	color: #fff;
+	font-size: 1.3em;
+	background-color: #001a33;
+}
+/****************************************/
+
+/*section main curses and news*/
+section.main {
+	display: flex;
+	width: 100%;
+	background-color: #ccc;
+}
+section.main article.curses {
+	flex: 70%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	justify-content: space-around;
+	background-color: #e6f2ff;
+}
+section.main article.curses > article {
+	width: 200px;
+	height: 200px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #3399ff;
+}
+section.main article.curses article span {
+	display: block; 
+	text-align: center; 
+	margin-top: 10px; 
+	font-size: 1.5em;
+	transition: 1s;
+}
+section.main article.curses article:hover span {font-size: 2em;}
+section.main article.curses article p {color: #000;}
+section.main article.curses article h1, 
+section.main article.news article h1 {
+	text-align: center;
+	margin-bottom: 8px;
+	margin-top: 4px;
+	font-size: 1.5em;
+	word-wrap: break-word;
+}
+
+section.main article.curses article p,
+section.main article.news article p {
+	word-wrap: break-word;
+	margin-left: 8px;
+}
+
+section.main article.curses > article:hover {
+	box-shadow: 0px 0px 5px #000;
+	cursor: pointer;
+	background-color: rgba(255,255,255,0.3);
+	border: 1px solid #000;
+} 
+section.main article.news {
+	flex: 30%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	background-color: #004d99;
+}
+
+section.main article.news article h1, p {color: #fff;}
+
+section.main article.news > article {
+	width: 200px;
+	height: 200px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: #001a33;
+}
+section.main article.news > article:hover {cursor: pointer;}
+
+/* footer */
+footer.rodape {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;	
+	width: 100%;
+	height: 200px;
+	background-color: rgb(0, 51, 102);
+}
+footer.rodape article.address,
+article.social {
+	width: 49%;
+	height: 100px;
+	background-color: #00264d;
+}
+
+footer.rodape article.address ul {
+	list-style: none;
+	margin-top: 10px;
+}
+footer.rodape article.address li {
+	display: block;
+	color: #fff;
+	font-size: 1.2em;
+	padding-left: 20px;
+}
+
+footer.rodape article.social a  {
+	font-size: 2em;
+	color: #fff;
+	line-height: 100px;
+	margin-left: 20px;
+	margin-right: 10px;
+}
+
+/*response website*/
+@media only screen and (max-width: 1286px) {
+	
+	section.main article.curses > article {
+		margin-left: 10px;	
+	}
+
+}/*
+@media only screen and (max-width: 858px) {
+	
+	section.nav-form nav.menu {
+		flex: 50%;
+		height: 50px;
+		background-color: #004d99;
+	}	
+
+	section.nav-form form {
+		flex: 50%;
+		justify-content: center;
+		align-items: center;
+		padding: 0px;	 	
+		height: 50px;
+		background-color: #004d99;
+	}
+	section.nav-form form input {
+		width: 60%;
+	}
+	section.nav-form form button {
+		width: 20%;
+	}
+}*/
+@media only screen and (max-width: 900px) {
+	
+	header.cabecalho {align-items: center; justify-content: center;}
+
+	section.main {flex-flow: column;}
+	section.main article.curses > article {
+		width: 200px;
+		height: 200px;
+		margin-right: 1px;
+		margin-left: 0px;
+	}
+
+	section.main article.news {
+		height: 200px;
+	}
+
+
+	section.main article.news {
+		flex-flow: row wrap;
+		justify-content: center;
+		align-content: flex-start;
+	}
+	section.main article.news > article {
+		width: 200px;
+		height: 200px;
+		margin-top: 20px;
+		margin-bottom: 0px;
+		margin-right: 2px;
+		background-color: red;
+	}	
+
+}
+@media only screen and (max-width: 805px) {
+
+	section.main article.curses > article {
+		width: 200px;
+		height: 200px;
+		margin-left: 0px;
+	}	
+
+}
+@media only screen and (max-width: 850px) {
+
+		section.nav-form {flex-direction: column-reverse;}
+		section.nav-form form {
+			justify-content: center;
+			padding: 0px;
+		}
+		section.nav-form form input {
+			padding: 10px;
+		}
+		
+		section.nav-form form button {
+			width: 2.5em;
+		}
+	}
+
+@media only screen and (max-width: 700px) {
+
+	footer.rodape {
+		flex-direction: column;
+	}
+	footer.rodape article.address,
+	article.social {
+		width: 100%;
+		height: 100px;
+		border-top: 1px solid #fff;
+		background-color: #00264d;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+	
+	section.nav-form .menu-response {display: block;}
+	section.nav-form nav.menu {display: none;}
+	
+	section.nav-form nav.menu a {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+	}
+
+}
+@media only screen and (max-width: 320px) {
+footer.rodape article.social{display: flex;}
+footer.rodape article.social a {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	text-align: center;
+}
+
+}
+
